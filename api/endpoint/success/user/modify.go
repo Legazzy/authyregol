@@ -98,7 +98,7 @@ VALIDATION:
 CONFLICT:
 
 	if fetch.UserByCredentialUsername(&user.User{}, tar.Credential.Username) != nil {
-		goto TARGET
+		goto PROCESSING
 	}
 
 	res = response.NewClientConflict("The username is already in use")
