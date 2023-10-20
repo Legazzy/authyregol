@@ -1,0 +1,6 @@
+# Docker files
+run/docker-compose.yml
+run/Dockerfile
+
+# Project information
+README.md
