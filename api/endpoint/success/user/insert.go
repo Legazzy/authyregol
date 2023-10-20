@@ -47,8 +47,7 @@ REQUEST:
 
 VALIDATION:
 
-	reg := "^[\\w]{5,20}$"
-	if mat, _ := regexp.MatchString(reg, req.Credential.Username); mat {
+	if mat, _ := regexp.MatchString("^[\\w]{5,20}$", req.Credential.Username); mat {
 		goto CONFLICT
 	}
 
@@ -60,7 +59,7 @@ VALIDATION:
 
 CONFLICT:
 
-	if fetch.UserByCredentialUsername(&user.User{}, req.Credential.Username) == nil {
+	if fetch.UserByCredentialUsername(&user.User{}, req.Credential.Username) != nil {
 		goto TARGET
 	}
 
@@ -76,6 +75,7 @@ TARGET:
 	tar.Address = req.Address
 	tar.Contact = req.Contact
 	tar.Personal = req.Personal
+	tar.Credential.Username = req.Credential.Username
 	tar.Credential.Password = tool.NewHash(req.Credential.Password + tar.Credential.Prefixes)
 
 	if insert.User(&tar) == nil {

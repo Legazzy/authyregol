@@ -46,8 +46,7 @@ REQUEST:
 
 VALIDATION:
 
-	reg := "\\w{5,20}"
-	if mat, _ := regexp.MatchString(reg, req.Name); mat {
+	if mat, _ := regexp.MatchString("\\w{5,20}", req.Name); mat {
 		goto CONFLICT
 	}
 
