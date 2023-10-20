@@ -1,0 +1,32 @@
+name: servers-authyre
+
+
+services:
+
+  servers-authyre-service-mongostore:
+    container_name: servers-authyre-service-mongostore
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: [MONGO_USERNAME]
+      MONGO_INITDB_ROOT_PASSWORD: [MONGO_PASSWORD]
+    networks:
+      - "servers-authyre-network"
+
+  servers-authyre-service-authyreapi:
+    container_name: servers-authyre-service-authyreapi
+    image: authyreapi
+    restart: always
+    environment:
+      MONGO_HOSTNAME: servers-authyre-service-mongostore
+      MONGO_USERNAME: [MONGO_USERNAME]
+      MONGO_PASSWORD: [MONGO_PASSWORD]
+    networks:
+      - "servers-authyre-network"
+    ports:
+      - "8080:8080"
+
+networks:
+  servers-authyre-network:
+    name: servers-authyre-network
+    driver: bridge
