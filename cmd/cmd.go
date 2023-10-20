@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	gin.SetMode(gin.DebugMode)
+	gin.SetMode(gin.ReleaseMode)
 
 	configuration.LoadDatabase()
 	configuration.LoadGin()
