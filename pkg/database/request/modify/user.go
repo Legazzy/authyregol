@@ -12,7 +12,7 @@ func UserByIdentifierUser(entity *user.User, user string) error {
 
 	if col, err := mongo.LoadCollection(mongo.CollectionUser); err != nil {
 		return err
-	} else if _, err := col.ReplaceOne(context.TODO(), entity, que); err != nil {
+	} else if _, err := col.ReplaceOne(context.TODO(), que, entity); err != nil {
 		return err
 	}
 

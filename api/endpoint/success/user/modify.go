@@ -1,6 +1,7 @@
 package user
 
 import (
+	"fmt"
 	"github.com/authyre/authyre-api/api/response"
 	"github.com/authyre/authyre-api/api/transfer"
 	"github.com/authyre/authyre-api/pkg/database/request/fetch"
@@ -11,6 +12,7 @@ import (
 	"github.com/authyre/authyre-api/pkg/setup/standard"
 	"github.com/authyre/authyre-api/pkg/setup/tool"
 	"github.com/gin-gonic/gin"
+	"regexp"
 )
 
 func Modify(ctx *gin.Context) {
@@ -57,13 +59,19 @@ REQUEST:
 	req.Contact = tar.Contact
 	req.Personal = tar.Personal
 
-	if ctx.ShouldBindJSON(req) == nil {
+	if ctx.ShouldBindJSON(&req) == nil {
 		tar.Address = req.Address
 		tar.Contact = req.Contact
 		tar.Personal = req.Personal
 
 		if tar.Credential.Password != req.Credential.Password {
 			tar.Credential.Password = tool.NewHash(req.Credential.Password + tar.Credential.Prefixes)
+		}
+
+		if tar.Credential.Username != req.Credential.Username {
+			tar.Credential.Username = req.Credential.Username
+
+			goto VALIDATION
 		}
 
 		goto PROCESSING
@@ -75,7 +83,33 @@ REQUEST:
 
 	return
 
+VALIDATION:
+
+	if mat, _ := regexp.MatchString("^[\\w]{5,20}$", req.Credential.Username); mat {
+		goto CONFLICT
+	}
+
+	res = response.NewClientBadRequest("The username must be between 5 and 20 characters and contain word characters")
+	ctx.JSON(res.Status, res)
+	ctx.Abort()
+
+	return
+
+CONFLICT:
+
+	if fetch.UserByCredentialUsername(&user.User{}, tar.Credential.Username) == nil {
+		goto TARGET
+	}
+
+	res = response.NewClientConflict("The username is already in use")
+	ctx.JSON(res.Status, res)
+	ctx.Abort()
+
+	return
+
 PROCESSING:
+
+	fmt.Println(tar.Credential.Username)
 
 	if modify.UserByIdentifierUser(&tar, tar.Identifier.User) == nil {
 		goto SUCCESS
