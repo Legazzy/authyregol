@@ -97,7 +97,7 @@ VALIDATION:
 
 CONFLICT:
 
-	if fetch.UserByCredentialUsername(&user.User{}, tar.Credential.Username) == nil {
+	if fetch.UserByCredentialUsername(&user.User{}, tar.Credential.Username) != nil {
 		goto TARGET
 	}
 
