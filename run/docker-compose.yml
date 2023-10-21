@@ -8,8 +8,8 @@ services:
     image: mongo
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: [MONGO_USERNAME]
-      MONGO_INITDB_ROOT_PASSWORD: [MONGO_PASSWORD]
+      MONGO_INITDB_ROOT_USERNAME: # MONGO_USERNAME
+      MONGO_INITDB_ROOT_PASSWORD: # MONGO_PASSWORD
     volumes:
       - "servers-authyre-volumes-mongostore:/"
     networks:
@@ -21,8 +21,8 @@ services:
     restart: always
     environment:
       MONGO_HOSTNAME: servers-authyre-service-mongostore
-      MONGO_USERNAME: [MONGO_USERNAME]
-      MONGO_PASSWORD: [MONGO_PASSWORD]
+      MONGO_USERNAME: # MONGO_USERNAME
+      MONGO_PASSWORD: # MONGO_PASSWORD
     networks:
       - "servers-authyre-network"
     ports:
