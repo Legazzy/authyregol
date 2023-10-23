@@ -1,2 +1,5 @@
 # IDE configuration
 .idea/workspace.xml
+
+# OS generated files
+.DS_Store
