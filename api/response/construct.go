@@ -104,6 +104,19 @@ func NewClientNotFound(detail string) Response {
 	return res
 }
 
+func NewClientTooManyRequests(detail string) Response {
+	res := Response{}
+
+	res.Status = 429
+
+	res.Header = "Too Many Requests"
+	res.Extern = "https://www.rfc-editor.org/rfc/rfc6585.html#section-4"
+
+	res.Detail = detail
+
+	return res
+}
+
 func NewClientUnauthorized(detail string) Response {
 	res := Response{}
 

@@ -9,6 +9,7 @@ import (
 func Attach(eng *gin.Engine) {
 	grp := eng.Group("/user")
 
+	grp.Use(authentication.HandleLimits)
 	grp.Use(authentication.HandleBearer)
 	grp.Use(connection.HandleEndpoint)
 

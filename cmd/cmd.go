@@ -6,13 +6,10 @@ import (
 	"github.com/authyre/authyre-api/pkg/database/mongo"
 	"github.com/authyre/authyre-api/pkg/setup/configuration"
 	"github.com/authyre/authyre-api/pkg/setup/population"
-	"github.com/gin-gonic/gin"
 	"sync"
 )
 
 func main() {
-	gin.SetMode(gin.ReleaseMode)
-
 	configuration.LoadDatabase()
 	configuration.LoadGin()
 	configuration.LoadPopulation()

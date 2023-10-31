@@ -12,6 +12,7 @@ func Attach(eng *gin.Engine) {
 	cre := grp.Group("")
 	tok := grp.Group("")
 
+	grp.Use(authentication.HandleLimits)
 	cre.Use(authentication.HandleBasic)
 	tok.Use(authentication.HandleBearer)
 	grp.Use(connection.HandleEndpoint)

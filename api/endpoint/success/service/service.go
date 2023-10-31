@@ -14,6 +14,7 @@ func Attach(eng *gin.Engine) {
 
 	tok := grp.Group("")
 
+	grp.Use(authentication.HandleLimits)
 	tok.Use(authentication.HandleBearer)
 	tok.Use(connection.HandleEndpoint)
 
