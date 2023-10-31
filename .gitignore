@@ -1,4 +1,5 @@
 # IDE configuration
+.fleet/run.json
 .idea/workspace.xml
 
 # OS generated files
