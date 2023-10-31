@@ -1,6 +1,7 @@
 package service
 
 import (
+	"github.com/Authyre/authyreapi/api/middleware/authentication"
 	"github.com/Authyre/authyreapi/api/response"
 	"github.com/Authyre/authyreapi/api/transfer"
 	"github.com/Authyre/authyreapi/pkg/database/request/fetch"
@@ -58,7 +59,7 @@ VALIDATION:
 
 CONFLICT:
 
-	if fetch.ServiceByDescriptionName(&service.Service{}, req.Name) != nil {
+	if fetch.ServiceByDetailsName(&service.Service{}, req.Name) != nil {
 		goto TARGET
 	}
 
@@ -71,10 +72,11 @@ CONFLICT:
 TARGET:
 
 	tar := service.NewService()
-	tar.Description.Author = req.Author
-	tar.Description.Details = req.Details
-	tar.Description.Name = req.Name
-	tar.Description.Version = req.Version
+	tar.Details.Address = req.Address
+	tar.Details.Author = req.Author
+	tar.Details.Description = req.Details
+	tar.Details.Name = req.Name
+	tar.Details.Version = req.Version
 
 	if insert.Service(&tar) == nil {
 		goto SUCCESS
@@ -87,6 +89,8 @@ TARGET:
 	return
 
 SUCCESS:
+
+	authentication.Services[tar.Details.Address] = &tar
 
 	res = response.NewSuccessCreated("The service was successfully created")
 	res.Return = req

@@ -3,16 +3,26 @@ package authentication
 import (
 	"github.com/Authyre/authyreapi/api/response"
 	"github.com/Authyre/authyreapi/pkg/object/request"
+	"github.com/Authyre/authyreapi/pkg/object/service"
 	"github.com/gin-gonic/gin"
 	"time"
 )
 
-var requests = make(map[string]*request.Request)
+var Requests = make(map[string]*request.Request)
+var Services = make(map[string]*service.Service)
 
 func HandleLimits(ctx *gin.Context) {
-	req := requests[ctx.ClientIP()]
+	req := Requests[ctx.ClientIP()]
 
 	var res response.Response
+	goto WILDCARD
+
+WILDCARD:
+
+	if Services[ctx.ClientIP()] != nil {
+		goto NEXT
+	}
+
 	goto TARGET
 
 TARGET:
@@ -21,7 +31,7 @@ TARGET:
 		goto VALIDATION
 	}
 
-	requests[ctx.ClientIP()] = request.NewRequest()
+	Requests[ctx.ClientIP()] = request.NewRequest()
 	ctx.Next()
 
 	return

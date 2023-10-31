@@ -2,6 +2,7 @@ package fetch
 
 import (
 	"context"
+	"github.com/Authyre/authyreapi/api/middleware/authentication"
 	"github.com/Authyre/authyreapi/pkg/database/mongo"
 	"github.com/Authyre/authyreapi/pkg/object/service"
 	"go.mongodb.org/mongo-driver/bson"
@@ -19,8 +20,8 @@ func ServiceByIdentifierService(entity *service.Service, service string) error {
 	return nil
 }
 
-func ServiceByDescriptionName(entity *service.Service, name string) error {
-	que := bson.M{"description.name": name}
+func ServiceByDetailsName(entity *service.Service, name string) error {
+	que := bson.M{"details.name": name}
 
 	if col, err := mongo.LoadCollection(mongo.CollectionService); err != nil {
 		return err

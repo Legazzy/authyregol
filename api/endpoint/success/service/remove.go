@@ -32,7 +32,7 @@ PERMISSION:
 TARGET:
 
 	var tar service.Service
-	if fetch.ServiceByDescriptionName(&tar, ctx.Param("description_name")) == nil {
+	if fetch.ServiceByDetailsName(&tar, ctx.Param("description_name")) == nil {
 		goto PROCESSING
 	}
 

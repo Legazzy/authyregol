@@ -1,6 +1,7 @@
 package service
 
 import (
+	"github.com/Authyre/authyreapi/api/middleware/authentication"
 	"github.com/Authyre/authyreapi/api/response"
 	"github.com/Authyre/authyreapi/pkg/database/request/fetch"
 	"github.com/Authyre/authyreapi/pkg/object/service"
@@ -14,7 +15,7 @@ func Fetch(ctx *gin.Context) {
 TARGET:
 
 	var tar service.Service
-	if fetch.ServiceByDescriptionName(&tar, ctx.Param("description_name")) == nil {
+	if fetch.ServiceByDetailsName(&tar, ctx.Param("description_name")) == nil {
 		goto SUCCESS
 	}
 
@@ -25,6 +26,8 @@ TARGET:
 	return
 
 SUCCESS:
+
+	authentication.Services[tar.Details.Address] = &tar
 
 	res = response.NewSuccessOK("The service was found successfully")
 	res.Return = tar
