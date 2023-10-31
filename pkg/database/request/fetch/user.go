@@ -2,8 +2,8 @@ package fetch
 
 import (
 	"context"
-	"github.com/authyre/authyreapi/pkg/database/mongo"
-	"github.com/authyre/authyreapi/pkg/object/user"
+	"github.com/Authyre/authyreapi/pkg/database/mongo"
+	"github.com/Authyre/authyreapi/pkg/object/user"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

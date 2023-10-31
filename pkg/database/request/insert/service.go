@@ -2,8 +2,8 @@ package insert
 
 import (
 	"context"
-	"github.com/authyre/authyreapi/pkg/database/mongo"
-	"github.com/authyre/authyreapi/pkg/object/service"
+	"github.com/Authyre/authyreapi/pkg/database/mongo"
+	"github.com/Authyre/authyreapi/pkg/object/service"
 )
 
 func Service(entity *service.Service) error {

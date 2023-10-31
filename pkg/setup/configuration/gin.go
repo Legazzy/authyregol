@@ -1,7 +1,7 @@
 package configuration
 
 import (
-	"github.com/authyre/authyreapi/api"
+	"github.com/Authyre/authyreapi/api"
 	"os"
 )
 

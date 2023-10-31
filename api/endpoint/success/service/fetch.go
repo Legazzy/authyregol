@@ -1,9 +1,9 @@
 package service
 
 import (
-	"github.com/authyre/authyreapi/api/response"
-	"github.com/authyre/authyreapi/pkg/database/request/fetch"
-	"github.com/authyre/authyreapi/pkg/object/service"
+	"github.com/Authyre/authyreapi/api/response"
+	"github.com/Authyre/authyreapi/pkg/database/request/fetch"
+	"github.com/Authyre/authyreapi/pkg/object/service"
 	"github.com/gin-gonic/gin"
 )
 

@@ -1,8 +1,8 @@
 package standard
 
 import (
-	"github.com/authyre/authyreapi/pkg/object/user"
-	"github.com/authyre/authyreapi/pkg/setup/tool"
+	"github.com/Authyre/authyreapi/pkg/object/user"
+	"github.com/Authyre/authyreapi/pkg/setup/tool"
 )
 
 func GetUser() user.User {

@@ -1,7 +1,7 @@
 package failure
 
 import (
-	"github.com/authyre/authyreapi/api/response"
+	"github.com/Authyre/authyreapi/api/response"
 	"github.com/gin-gonic/gin"
 )
 

@@ -2,10 +2,10 @@ package main
 
 import (
 	"context"
-	"github.com/authyre/authyreapi/api"
-	"github.com/authyre/authyreapi/pkg/database/mongo"
-	"github.com/authyre/authyreapi/pkg/setup/configuration"
-	"github.com/authyre/authyreapi/pkg/setup/population"
+	"github.com/Authyre/authyreapi/api"
+	"github.com/Authyre/authyreapi/pkg/database/mongo"
+	"github.com/Authyre/authyreapi/pkg/setup/configuration"
+	"github.com/Authyre/authyreapi/pkg/setup/population"
 	"sync"
 )
 

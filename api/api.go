@@ -2,11 +2,11 @@ package api
 
 import (
 	"fmt"
-	"github.com/authyre/authyreapi/api/endpoint/failure"
-	"github.com/authyre/authyreapi/api/endpoint/success/permission"
-	"github.com/authyre/authyreapi/api/endpoint/success/service"
-	"github.com/authyre/authyreapi/api/endpoint/success/token"
-	"github.com/authyre/authyreapi/api/endpoint/success/user"
+	"github.com/Authyre/authyreapi/api/endpoint/failure"
+	"github.com/Authyre/authyreapi/api/endpoint/success/permission"
+	"github.com/Authyre/authyreapi/api/endpoint/success/service"
+	"github.com/Authyre/authyreapi/api/endpoint/success/token"
+	"github.com/Authyre/authyreapi/api/endpoint/success/user"
 	"github.com/gin-gonic/gin"
 )
 

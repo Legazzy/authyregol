@@ -1,4 +1,4 @@
-module github.com/authyre/authyreapi
+module github.com/Authyre/authyreapi
 
 go 1.21
 

@@ -1,6 +1,6 @@
 package standard
 
-import "github.com/authyre/authyreapi/pkg/object/permission"
+import "github.com/Authyre/authyreapi/pkg/object/permission"
 
 func GetPermissionPersonalChanges() permission.Permission {
 	per := permission.NewPermission()

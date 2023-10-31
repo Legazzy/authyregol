@@ -1,6 +1,6 @@
 package transfer
 
-import "github.com/authyre/authyreapi/pkg/object/token"
+import "github.com/Authyre/authyreapi/pkg/object/token"
 
 type Token struct {
 	Endpoint token.Endpoint

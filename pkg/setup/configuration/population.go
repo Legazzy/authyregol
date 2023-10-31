@@ -1,7 +1,7 @@
 package configuration
 
 import (
-	"github.com/authyre/authyreapi/pkg/setup/population"
+	"github.com/Authyre/authyreapi/pkg/setup/population"
 	"os"
 	"strconv"
 )

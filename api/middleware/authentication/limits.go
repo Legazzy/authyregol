@@ -1,8 +1,8 @@
 package authentication
 
 import (
-	"github.com/authyre/authyreapi/api/response"
-	"github.com/authyre/authyreapi/pkg/object/request"
+	"github.com/Authyre/authyreapi/api/response"
+	"github.com/Authyre/authyreapi/pkg/object/request"
 	"github.com/gin-gonic/gin"
 	"time"
 )

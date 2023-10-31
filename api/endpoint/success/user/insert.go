@@ -1,15 +1,15 @@
 package user
 
 import (
-	"github.com/authyre/authyreapi/api/response"
-	"github.com/authyre/authyreapi/api/transfer"
-	"github.com/authyre/authyreapi/pkg/database/request/fetch"
-	"github.com/authyre/authyreapi/pkg/database/request/insert"
-	"github.com/authyre/authyreapi/pkg/object/permission"
-	"github.com/authyre/authyreapi/pkg/object/token"
-	"github.com/authyre/authyreapi/pkg/object/user"
-	"github.com/authyre/authyreapi/pkg/setup/standard"
-	"github.com/authyre/authyreapi/pkg/setup/tool"
+	"github.com/Authyre/authyreapi/api/response"
+	"github.com/Authyre/authyreapi/api/transfer"
+	"github.com/Authyre/authyreapi/pkg/database/request/fetch"
+	"github.com/Authyre/authyreapi/pkg/database/request/insert"
+	"github.com/Authyre/authyreapi/pkg/object/permission"
+	"github.com/Authyre/authyreapi/pkg/object/token"
+	"github.com/Authyre/authyreapi/pkg/object/user"
+	"github.com/Authyre/authyreapi/pkg/setup/standard"
+	"github.com/Authyre/authyreapi/pkg/setup/tool"
 	"github.com/gin-gonic/gin"
 	"regexp"
 )

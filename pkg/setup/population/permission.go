@@ -1,9 +1,9 @@
 package population
 
 import (
-	"github.com/authyre/authyreapi/pkg/database/request/fetch"
-	"github.com/authyre/authyreapi/pkg/database/request/insert"
-	"github.com/authyre/authyreapi/pkg/setup/standard"
+	"github.com/Authyre/authyreapi/pkg/database/request/fetch"
+	"github.com/Authyre/authyreapi/pkg/database/request/insert"
+	"github.com/Authyre/authyreapi/pkg/setup/standard"
 )
 
 var RepopulatePermissions = true
