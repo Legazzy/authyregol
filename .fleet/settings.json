@@ -1,9 +1,9 @@
 {
-    /*    "files.exclude": [
-    ".DS_Store",
-".dockerignore",
-".gitignore",
-".git",
-".idea",
-],*/
+    "files.exclude": [
+        ".DS_Store",
+        ".dockerignore",
+        ".gitignore",
+        ".git",
+        ".idea",
+    ],
 }

@@ -33,7 +33,7 @@ VALIDATION:
 	req.Last = time.Now().Unix()
 
 	if req.Amount <= req.Limit {
-		goto SUCCESS
+		goto NEXT
 	}
 
 	res = response.NewClientTooManyRequests("The request limit is exceeded")
@@ -42,7 +42,7 @@ VALIDATION:
 
 	return
 
-SUCCESS:
+NEXT:
 
 	ctx.Next()
 }
