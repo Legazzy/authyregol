@@ -1,7 +1,7 @@
 package token
 
 import (
-	"github.com/authyre/authyre-api/pkg/setup/tool"
+	"github.com/authyre/authyreapi/pkg/setup/tool"
 	"github.com/google/uuid"
 	"time"
 )

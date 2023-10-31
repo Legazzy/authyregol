@@ -2,8 +2,8 @@ package insert
 
 import (
 	"context"
-	"github.com/authyre/authyre-api/pkg/database/mongo"
-	"github.com/authyre/authyre-api/pkg/object/token"
+	"github.com/authyre/authyreapi/pkg/database/mongo"
+	"github.com/authyre/authyreapi/pkg/object/token"
 )
 
 func Token(entity *token.Token) error {

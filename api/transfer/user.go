@@ -1,6 +1,6 @@
 package transfer
 
-import "github.com/authyre/authyre-api/pkg/object/user"
+import "github.com/authyre/authyreapi/pkg/object/user"
 
 type User struct {
 	Address  user.Address

@@ -2,7 +2,7 @@ package remove
 
 import (
 	"context"
-	"github.com/authyre/authyre-api/pkg/database/mongo"
+	"github.com/authyre/authyreapi/pkg/database/mongo"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

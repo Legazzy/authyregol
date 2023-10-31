@@ -1,10 +1,10 @@
 package authentication
 
 import (
-	"github.com/authyre/authyre-api/api/response"
-	"github.com/authyre/authyre-api/pkg/database/request/fetch"
-	"github.com/authyre/authyre-api/pkg/object/user"
-	"github.com/authyre/authyre-api/pkg/setup/tool"
+	"github.com/authyre/authyreapi/api/response"
+	"github.com/authyre/authyreapi/pkg/database/request/fetch"
+	"github.com/authyre/authyreapi/pkg/object/user"
+	"github.com/authyre/authyreapi/pkg/setup/tool"
 	"github.com/gin-gonic/gin"
 )
 

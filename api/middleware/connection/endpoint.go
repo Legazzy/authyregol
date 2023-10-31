@@ -1,9 +1,9 @@
 package connection
 
 import (
-	"github.com/authyre/authyre-api/api/response"
-	"github.com/authyre/authyre-api/pkg/database/request/insert"
-	"github.com/authyre/authyre-api/pkg/object/token"
+	"github.com/authyre/authyreapi/api/response"
+	"github.com/authyre/authyreapi/pkg/database/request/insert"
+	"github.com/authyre/authyreapi/pkg/object/token"
 	"github.com/gin-gonic/gin"
 )
 

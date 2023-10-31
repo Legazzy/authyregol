@@ -1,8 +1,8 @@
 package token
 
 import (
-	"github.com/authyre/authyre-api/api/middleware/authentication"
-	"github.com/authyre/authyre-api/api/middleware/connection"
+	"github.com/authyre/authyreapi/api/middleware/authentication"
+	"github.com/authyre/authyreapi/api/middleware/connection"
 	"github.com/gin-gonic/gin"
 )
 

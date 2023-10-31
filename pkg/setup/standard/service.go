@@ -1,6 +1,6 @@
 package standard
 
-import "github.com/authyre/authyre-api/pkg/object/service"
+import "github.com/authyre/authyreapi/pkg/object/service"
 
 func GetService() service.Service {
 	ser := service.NewService()

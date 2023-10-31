@@ -1,7 +1,7 @@
 package configuration
 
 import (
-	"github.com/authyre/authyre-api/pkg/database/mongo"
+	"github.com/authyre/authyreapi/pkg/database/mongo"
 	"os"
 )
 

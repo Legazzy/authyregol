@@ -1,14 +1,14 @@
 package service
 
 import (
-	"github.com/authyre/authyre-api/api/response"
-	"github.com/authyre/authyre-api/api/transfer"
-	"github.com/authyre/authyre-api/pkg/database/request/fetch"
-	"github.com/authyre/authyre-api/pkg/database/request/insert"
-	"github.com/authyre/authyre-api/pkg/object/permission"
-	"github.com/authyre/authyre-api/pkg/object/service"
-	"github.com/authyre/authyre-api/pkg/object/token"
-	"github.com/authyre/authyre-api/pkg/setup/standard"
+	"github.com/authyre/authyreapi/api/response"
+	"github.com/authyre/authyreapi/api/transfer"
+	"github.com/authyre/authyreapi/pkg/database/request/fetch"
+	"github.com/authyre/authyreapi/pkg/database/request/insert"
+	"github.com/authyre/authyreapi/pkg/object/permission"
+	"github.com/authyre/authyreapi/pkg/object/service"
+	"github.com/authyre/authyreapi/pkg/object/token"
+	"github.com/authyre/authyreapi/pkg/setup/standard"
 	"github.com/gin-gonic/gin"
 	"regexp"
 )

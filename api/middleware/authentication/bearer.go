@@ -1,11 +1,11 @@
 package authentication
 
 import (
-	"github.com/authyre/authyre-api/api/response"
-	"github.com/authyre/authyre-api/pkg/database/request/fetch"
-	"github.com/authyre/authyre-api/pkg/database/request/remove"
-	"github.com/authyre/authyre-api/pkg/object/token"
-	"github.com/authyre/authyre-api/pkg/object/user"
+	"github.com/authyre/authyreapi/api/response"
+	"github.com/authyre/authyreapi/pkg/database/request/fetch"
+	"github.com/authyre/authyreapi/pkg/database/request/remove"
+	"github.com/authyre/authyreapi/pkg/object/token"
+	"github.com/authyre/authyreapi/pkg/object/user"
 	"github.com/gin-gonic/gin"
 	"strings"
 	"time"
