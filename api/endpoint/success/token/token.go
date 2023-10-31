@@ -14,7 +14,6 @@ func Attach(eng *gin.Engine) {
 
 	cre.Use(authentication.HandleLimits)
 	cre.Use(authentication.HandleBasic)
-	cre.Use(connection.HandleEndpoint)
 
 	tok.Use(authentication.HandleLimits)
 	tok.Use(authentication.HandleBearer)
